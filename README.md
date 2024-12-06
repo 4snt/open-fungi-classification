@@ -1,3 +1,5 @@
+Aqui está o conteúdo formatado como um arquivo `README.md` para GitHub:
+
 ```markdown
 # Microscopic Fungi Image Classification
 
@@ -143,4 +145,9 @@ Contribuições são bem-vindas! Siga os passos abaixo para colaborar:
 Este projeto está sob a licença [MIT](LICENSE). Sinta-se à vontade para utilizá-lo e modificá-lo conforme necessário.
 ```
 
-Agora o `README.md` está formatado corretamente para o GitHub e cobre todas as partes do seu projeto. Se precisar de mais ajustes, é só falar!
+### Como Usar no GitHub
+
+1. Salve o texto acima como `README.md` na raiz do seu projeto.
+2. Ao enviar o repositório para o GitHub, o `README.md` será automaticamente renderizado na página inicial do seu repositório.
+
+Se precisar de ajustes ou personalizações adicionais, é só avisar!
