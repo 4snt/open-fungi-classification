@@ -1,7 +1,4 @@
-Aqui está o conteúdo formatado como um arquivo `README.md` para GitHub:
-
-```markdown
-# Microscopic Fungi Image Classification
+# Open Fungi Image Classification
 
 Este projeto é uma solução para a classificação de imagens microscópicas de fungos utilizando **Transfer Learning** com o modelo **VGG16**. Ele abrange etapas como pré-processamento de dados, treinamento do modelo, avaliação e visualização dos resultados.
 
