@@ -5,9 +5,9 @@ from model.model_training import train_model
 from model.model_evaluation import evaluate_model, plot_training_history, plot_confusion_matrix
 
 # Diretórios e parâmetros do dataset
-train_dir = './data/microscopic-fungi-images/train'
-valid_dir = './data/microscopic-fungi-images/valid'
-test_dir = './data/microscopic-fungi-images/test'
+train_dir = './data/fungi-images/train'
+valid_dir = './data/fungi-images/valid'
+test_dir = './data/fungi-images/test'
 img_width, img_height = 64, 64
 
 # Pré-processamento dos dados
