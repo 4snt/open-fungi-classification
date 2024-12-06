@@ -20,6 +20,11 @@ Este projeto é uma solução para a classificação de imagens microscópicas d
 project/
 │
 ├── data/
+│   ├──fungi-images/
+│   │    ├──test
+|   |    ├──train
+|   |    ├──valid  
+│   │
 │   ├── data_preprocessing.py       # Geradores de dados com aumento de dados
 │   ├── data_visualization.py       # Visualização inicial do dataset
 │
