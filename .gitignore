@@ -1,0 +1,9 @@
+# Ignorar todo o conteúdo dentro das pastas test, train e valid
+data/fungi-images/test/*
+data/fungi-images/train/*
+data/fungi-images/valid/*
+
+# Opcional: Permitir que o diretório (e sua estrutura) seja incluído, mas não os arquivos dentro dele
+!data/fungi-images/test/
+!data/fungi-images/train/
+!data/fungi-images/valid/

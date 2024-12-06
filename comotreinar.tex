@@ -1,0 +1,125 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\title{Open Fungi Image Classification - Guia de Treinamento}
+\author{Lord Python}
+\date{Dezembro 2024}
+
+\begin{document}
+
+\maketitle
+
+\section{Introdu\c{c}\~ao}
+Este projeto \'{e} uma solu\c{c}\~ao para a classifica\c{c}\~ao de imagens microsc\'opicas de fungos utilizando 	extbf{Transfer Learning} com o modelo 	extbf{VGG16}. Ele abrange etapas como pr\'e-processamento de dados, treinamento do modelo, avalia\c{c}\~ao e visualiza\c{c}\~ao dos resultados.
+
+\section{Funcionalidades}
+\begin{itemize}
+    \item 	extbf{Visualiza\c{c}\~ao do Dataset}: Exibe imagens por classe para compreens\~ao inicial dos dados.
+    \item 	extbf{Transfer Learning}: Utiliza a arquitetura pr\'e-treinada VGG16.
+    \item 	extbf{Grad-CAM}: Gera\c{c}\~ao de heatmaps para interpretar as previs\~oes do modelo.
+    \item 	extbf{M\'etricas de Avalia\c{c}\~ao}: Matriz de confus\~ao e relat\'orio de classifica\c{c}\~ao.
+    \item 	extbf{Treinamento Incremental}: Suporte para fine-tuning das camadas finais da VGG16.
+\end{itemize}
+
+\section{Estrutura do Projeto}
+\begin{verbatim}
+project/
+|
+├── data/
+│   ├──fungi-images/
+│   │    ├──test
+|   |    ├──train
+|   |    ├──valid  
+│   │
+│   ├── data_preprocessing.py       # Geradores de dados com aumento de dados
+│   ├── data_visualization.py       # Visualiza\c{c}\~ao inicial do dataset
+|
+├── model/
+│   ├── model_definition.py         # Defini\c{c}\~ao do modelo de Transfer Learning
+│   ├── model_training.py           # L\'ogica de treinamento do modelo
+│   ├── model_evaluation.py         # Avalia\c{c}\~ao e visualiza\c{c}\~ao dos resultados
+|
+├── utils/
+│   ├── grad_cam.py                 # Fun\c{c}\~ao para Grad-CAM (visualiza\c{c}\~ao de heatmaps)
+|
+├── index.py                        # Script principal para gerenciar o fluxo do projeto
+├── installer.py                    # Instalador autom\'atico de depend\^encias
+├── requirements.txt                # Lista de depend\^encias do projeto
+└── README.md                       # Documenta\c{c}\~ao do projeto
+\end{verbatim}
+
+\section{Pr\'e-requisitos}
+Antes de iniciar, voc\^e precisa ter:
+\begin{itemize}
+    \item 	extbf{Python 3.7+}
+    \item 	extbf{Pip} (gerenciador de pacotes do Python)
+    \item As bibliotecas listadas no arquivo 	exttt{requirements.txt}
+\end{itemize}
+
+\section{Como Configurar o Projeto}
+\begin{enumerate}
+    \item Clone este reposit\'orio ou baixe os arquivos:
+    \begin{verbatim}
+    git clone https://github.com/seu-usuario/microscopic-fungi-classification.git
+    cd microscopic-fungi-classification
+    \end{verbatim}
+    \item Instale as depend\^encias usando o instalador autom\'atico:
+    \begin{verbatim}
+    python installer.py
+    \end{verbatim}
+    \item Certifique-se de que o dataset est\'a organizado nos diret\'orios:
+    \begin{verbatim}
+    /kaggle/input/microscopic-fungi-images/
+    ├── train/
+    │   ├── Class1/
+    │   ├── Class2/
+    │   ...
+    ├── valid/
+    ├── test/
+    \end{verbatim}
+\end{enumerate}
+
+\section{Como Executar}
+\begin{enumerate}
+    \item Para visualizar as imagens e treinar o modelo, execute o arquivo principal:
+    \begin{verbatim}
+    python index.py
+    \end{verbatim}
+    \item O script realizar\'a as seguintes etapas:
+    \begin{itemize}
+        \item Carregar\'a os dados do conjunto de treinamento, valida\c{c}\~ao e teste.
+        \item Visualizar\'a as imagens por classe.
+        \item Construir\'a o modelo utilizando Transfer Learning.
+        \item Treinar\'a o modelo e avaliar\'a o desempenho.
+        \item Gerar\'a relat\'orios e gr\'aficos de avalia\c{c}\~ao.
+    \end{itemize}
+\end{enumerate}
+
+\section{Resultados}
+\subsection{Gr\'aficos de Treinamento}
+Exibe a precis\~ao e a perda durante o treinamento e valida\c{c}\~ao.
+
+\subsection{Matriz de Confus\~ao}
+Analisa os erros de classifica\c{c}\~ao do modelo.
+
+\subsection{Grad-CAM Heatmaps}
+Mostra as regi\~oes importantes nas imagens para cada classe predita.
+
+\subsection{Relat\'orio de Classifica\c{c}\~ao}
+Fornece m\'etricas detalhadas como precis\~ao, recall e F1-Score.
+
+\section{Contribuindo}
+Contribui\c{c}\~oes s\~ao bem-vindas! Siga os passos abaixo para colaborar:
+\begin{enumerate}
+    \item Fa\c{c}a um fork do reposit\'orio.
+    \item Crie um branch para sua feature ou corre\c{c}\~ao de bug: 	exttt{git checkout -b minha-feature}.
+    \item Fa\c{c}a o commit das suas altera\c{c}\~oes: 	exttt{git commit -m 'Adiciona nova funcionalidade'}.
+    \item Envie para o branch principal: 	exttt{git push origin minha-feature}.
+    \item Abra um Pull Request.
+\end{enumerate}
+
+\section{Licen\c{c}a}
+Este projeto est\'a sob a licen\c{c}a MIT. Sinta-se \`a vontade para utiliz\'a-lo e modific\'a-lo conforme necess\'ario.
+
+\end{document}
